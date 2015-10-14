@@ -1,22 +1,20 @@
-package br.unicamp.comprefacil.mockito;
+package br.unicamp.exemplo.wiremock;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 
+import br.unicamp.comprefacil.mockito.MockedClass;
 
-
-public class TestMock extends TestCase {
-	
+public class MockitoExample {
 	//Anota a interface que será mockada
 	@Mock
 	MockedClass mock;
 	
 	//Instancia o mock
-	public TestMock(){
+	public MockitoExample(){
 		mock = Mockito.mock(MockedClass.class);
 		
 		// Quando o método testMock for chamado, retorne "Mockito OKK"
@@ -30,11 +28,10 @@ public class TestMock extends TestCase {
 	
 	@Test
 	public void test(){
-		
-		
 		assertEquals(mock.testMock(), "Mock ok");
+		System.out.println(mock.testMock());
+		
 		assertEquals(mock.getName(), "Me chamo Moises !");
+		System.out.println(mock.getName());
 	}
-	
-
 }
