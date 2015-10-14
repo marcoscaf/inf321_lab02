@@ -1,4 +1,4 @@
-package br.unicamp.exemplo.mockito;
+package br.unicamp.comprefacil.mockito;
 
 public interface MockedClass {
 
